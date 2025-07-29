@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Server Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 { color: #ff6b6b; }
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>⚠️ React Development Server Not Running</h1>
+    <div class="instructions">
+        <p>The React development server is not available at localhost:3000</p>
+        <p><strong>To fix this:</strong></p>
+        <ol style="text-align: left;">
+            <li>Make sure you ran: <code>npm run dev</code></li>
+            <li>Wait for React server to start completely</li>
+            <li>Restart Electron if needed</li>
+        </ol>
+    </div>
+    <p>Close this window and try running <code>npm run dev</code> again.</p>
+</body>
+</html>

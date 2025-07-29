@@ -1,0 +1,49 @@
+{
+  "name": "youtube-downloader-electron",
+  "version": "1.0.0",
+  "description": "Free YouTube video downloader using Electron, React, and yt-dlp",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "react-bg": "cross-env BROWSER=none react-scripts start",
+    "react-build": "react-scripts build",
+    "build": "npm run react-build && electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "YouTube",
+    "downloader",
+    "Electron",
+    "React",
+    "yt-dlp",
+    "video",
+    "audio"
+  ],
+  "author": "GitHub",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "electron-builder": "^24.13.3",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0",
+    "cross-env": "^7.0.3"
+  },
+  "homepage": "./",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

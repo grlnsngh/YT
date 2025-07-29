@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Electron App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        .version-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        .version-info p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .success-message {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            color: #4ade80;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Electron Works!</h1>
+    <div class="success-message">Your minimal Electron app is running successfully!</div>
+    
+    <div class="version-info">
+        <h2>Version Information</h2>
+        <p>Chrome: <span id="chrome-version"></span></p>
+        <p>Node.js: <span id="node-version"></span></p>
+        <p>Electron: <span id="electron-version"></span></p>
+    </div>
+    
+    <p style="margin-top: 2rem; font-size: 1.1rem;">
+        This is a minimalistic Electron application to test if everything works correctly.
+    </p>
+</body>
+</html>
