@@ -13,42 +13,54 @@ A free, open-source YouTube video downloader built with Electron, React, and yt-
 
 ## 📋 Prerequisites
 
-Before running this application, you need to install **yt-dlp**:
+Before running this application, you need to install **yt-dlp** and **ffmpeg**:
 
-### Option 1: Install via Python (Recommended)
+### Automated Installation (Recommended)
+
 1. **Install Python** (if not already installed):
+
    - Download from [python.org](https://www.python.org/downloads/)
    - Make sure to check "Add Python to PATH" during installation
 
-2. **Install yt-dlp**:
+2. **Run the installation scripts**:
    ```bash
-   pip install yt-dlp
+   python install_yt_dlp.py
+   python install_ffmpeg.py
    ```
 
-### Option 2: Direct Download (Windows)
-1. Download the latest yt-dlp.exe from [GitHub releases](https://github.com/yt-dlp/yt-dlp/releases)
-2. Place it in a folder that's in your system PATH, or in the same folder as this app
+### Manual Installation Options
 
-### Option 3: Using Package Managers
-- **Windows (Chocolatey)**: `choco install yt-dlp`
-- **Windows (Scoop)**: `scoop install yt-dlp`
-- **macOS (Homebrew)**: `brew install yt-dlp`
-- **Linux (apt)**: `sudo apt install yt-dlp`
+- **yt-dlp**:
+  - Via pip: `pip install yt-dlp`
+  - Direct download (Windows): Get yt-dlp.exe from [GitHub releases](https://github.com/yt-dlp/yt-dlp/releases) and add to PATH
+  - Package managers: `choco install yt-dlp` (Windows), `brew install yt-dlp` (macOS), `sudo apt install yt-dlp` (Linux)
+- **ffmpeg**: Download from [ffmpeg.org](https://ffmpeg.org/download.html) and add to PATH
 
 ## 🏃‍♂️ Running the Application
 
-### Development Mode
-```bash
-npm install
-npm run dev
-```
+1. **Install dependencies**:
 
-### Production Mode
-```bash
-npm install
-npm run react-build
-npm start
-```
+   ```bash
+   npm install
+   ```
+
+2. **Run the Python installation scripts** (if not done in Prerequisites):
+
+   ```bash
+   python install_yt_dlp.py
+   python install_ffmpeg.py
+   ```
+
+3. **Start the React development server in background**:
+
+   ```bash
+   npm run react-bg
+   ```
+
+4. **Start the Electron app**:
+   ```bash
+   npm start
+   ```
 
 ## 🎯 How to Use
 
@@ -118,15 +130,18 @@ This tool is for educational purposes only. Please respect YouTube's Terms of Se
 ## 🐛 Troubleshooting
 
 ### "yt-dlp not found" Error
+
 - Make sure yt-dlp is installed and accessible from command line
 - Try running `yt-dlp --version` in terminal to verify installation
 
 ### Download Fails
+
 - Check if the YouTube URL is valid
 - Some videos may be restricted or require authentication
 - Try different format options
 
 ### Performance Issues
+
 - Large video files may take time to download
 - Check your internet connection
 - Close other bandwidth-intensive applications
